@@ -1,0 +1,26 @@
+.container {
+  width: 800px;
+  margin: 0px auto;
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(4, 200px);
+  background: linear-gradient(cyan 0%, white 100%); }
+  .container .item {
+    text-align: center; }
+    .container .item .arrow {
+      margin: -12px; }
+      .container .item .arrow img {
+        width: 20px;
+        height: 30px; }
+    .container .item img {
+      width: 150px;
+      height: 150px;
+      transition: all 1s; }
+      .container .item img.action:hover {
+        transform: rotate(360deg); }
+    .container .item p {
+      padding: 0px;
+      margin: 0px; }
+
+/*# sourceMappingURL=style.css.map */

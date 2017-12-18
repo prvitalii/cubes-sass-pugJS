@@ -1,0 +1,32 @@
+$num-cols: 4
+$num-rows: 3
+$grid-size: 200px
+$color1: cyan
+$color2: white
+=makeGradient($color1, $color2)
+	background: linear-gradient($color1 0%, $color2 100%)
+
+.container
+	width: $grid-size * $num-cols
+	margin: 0px auto
+	display: grid
+	height: 100%
+	grid-template-rows: repeat($num-rows, $grid-size)
+	grid-template-columns: repeat($num-cols, $grid-size)	
+	.item
+		text-align: center
+		.arrow
+			margin: -12px
+			img
+				width: 20px
+				height: 30px
+		img
+			width: $grid-size - 50px
+			height: $grid-size - 50px
+			transition: all 1s
+			&.action:hover
+				transform: rotate(360deg)
+		p
+			padding: 0px
+			margin: 0px
+	+makeGradient($color1, $color2)

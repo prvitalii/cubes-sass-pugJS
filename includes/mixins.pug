@@ -1,0 +1,17 @@
+mixin makeITDeps(item)
+	.item
+		-var opacity = "opacity:" + item.opacity
+		-var hrShort = "margin-bottom:-3px; border:1px dotted lightgrey; margin-right:1px; margin-left:" + item.hrMargin 
+		if item.hrMargin
+			hr(style=hrShort)
+		else if item.hr
+			hr(style="margin-bottom:-3px;" + hr)
+		span(style="display:block; color:lightgrey") 
+			|#{line}
+		if item.arrow
+			.arrow
+				img(src="arr.png")
+		img(src="cube.png" style=opacity).action
+		p= item.name
+		if item.hr
+			hr(style="margin-top:10px;" + hr)
